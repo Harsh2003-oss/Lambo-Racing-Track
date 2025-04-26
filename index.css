@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+    animation: bodyShake linear 6s infinite;
+}
+
+.sky {
+    height: 100vh;
+    width: 840vw;
+    position: absolute;
+    background-image: url(sky.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;       /* Ensures image covers entire element */
+    background-position: center;  /* Centers the image */
+    background-attachment: fixed; /* Optional: makes background */
+
+}
+.car{
+    height: 128px;
+    width: 260px;
+ position: absolute;
+ background-image: url(lambo.jpg);
+top: 16rem;
+ background-repeat: no-repeat;
+ position: absolute;
+ left:100px;
+bottom: 40px;
+animation: shake linear .7s infinite;
+
+}
+
+.track{
+    height: 35vh;
+    width: 800vw;
+ position: absolute;
+ background-image: url(track.jpg);
+ top: 63vh;
+ animation: carMove linear 6s infinite;
+
+}
+.wheel img{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top: 95px;
+    left: 20px;
+    border-radius: 50%;
+    animation: wheelRotation linear .6s infinite;
+}
+
+.wheel1{
+    height: 50px;
+    width: 50px;
+    
+}
+
+.wheel2 img{
+    
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top: 43px;
+    left: 170px;
+    border-radius: 50%;
+    animation: wheelRotation linear .6s infinite;
+
+}
+
+.bg{
+    height: 50vh;
+    width: 100%;
+    background-image: url("trees.jpeg");
+position: absolute;
+top: 10rem;
+}
+
+@keyframes wheelRotation {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes carMove {
+    100%{
+        transform: translateX(-500vh);
+    }
+}
+
+@keyframes shake {
+    0%{
+        transform: translateY(-8px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-8px);
+    }
+
+}
+
+@keyframes bodyShake {
+    0%{
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+
+}
